@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns1:dtls xmlns:ns1="urn:dtls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<martyr>
+		<ARMY_NO>1234567H</ARMY_NO>
+		<RANK>HAV</RANK>
+		<NAME>VINAY KUMAR</NAME>
+		<DOB>1985-08-30</DOB>
+		<DOE>2004-08-14</DOE>
+		<DOD>2024-05-31</DOD>
+		<CASUALTY>PHYSICAL</CASUALTY>
+		<PPO_NO>17105265478</PPO_NO>
+		<MARTIAL_STATUS>M</MARTIAL_STATUS>
+		<DOM>2007-06-25</DOM>
+		<PAN_NO>APNPK1350D</PAN_NO>
+		<AADHAR_NO>203277701349</AADHAR_NO>
+		<MOB_NO>9539692094</MOB_NO>
+		<EMAIL_ID>vinayaub3</EMAIL_ID>
+		<BANK_ACCT_NO>25058</BANK_ACCT_NO>
+		<IFSC>PUNB0050200</IFSC>
+		<HOUSE_NO>NA</HOUSE_NO>
+		<VILL>RAJABIGHA</VILL>
+		<PO>PADRAWAN</PO>
+		<PS>JAMHORE</PS>
+		<TEH>AUANGABAD</TEH>
+		<DIST>Aurangabad</DIST>
+		<STATE>Bihar</STATE>
+		<PIN>824101</PIN>
+		<NRS>ANUGRAH NARYAN ROAD</NRS>
+<FAMILY>
+     <member>
+        <NAME>BRAJ KISHOR SAO</NAME>
+        <GENDER>Male</GENDER>
+        <DOB>1962-07-03</DOB>
+        <REMARKS>ABCD</REMARKS>
+        <DOM>06-03-1984</DOM>
+        <DOD>16-07-1994</DOD>
+        <RELATION>Father</RELATION>
+     </member>
+     <member>
+        <NAME>NISNANT JOYDEEP MINZ</NAME>
+        <GENDER>Male</GENDER>
+        <DOB>2005-08-08</DOB>
+        <REMARKS>defggg</REMARKS>
+        <DOM>2005-01-31</DOM>
+        <DOD>2010-11-13</DOD>
+        <RELATION>Son</RELATION>
+     </member>
+    </FAMILY>
+    <NOK>
+     <nok>
+        <NAME>USHA DEVI</NAME>
+        <DOB>1964-05-11</DOB>
+        <RELATION>Daughter-in-law</RELATION>
+        <DOM>N/A</DOM>
+        <REMARKS>Married</REMARKS>
+        <AADHAR>125648596845</AADHAR>
+        <PAN>XYZW9876S</PAN>
+        <percentageShare>50</percentageShare>
+      </nok>
+    </NOK>
+    <TYPE_OF_PENSION>Special Family Pension</TYPE_OF_PENSION>
+    <RATE>38000</RATE>
+    <DA>4800</DA>
+	</martyr>
+	<martyr>
+		<ARMY_NO>2548659E</ARMY_NO>
+		<RANK>NB SUB</RANK>
+		<NAME>BIMAL MINZ</NAME>
+		<DOB>1982-09-04</DOB>
+		<DOE>1999-10-01</DOE>
+		<DOD>2024-06-30</DOD>
+		<CASUALTY>PHYSCL</CASUALTY>
+		<PPO_NO>15826548958</PPO_NO>
+		<MARTIAL_STATUS>M</MARTIAL_STATUS>
+		<DOM>2003-05-03</DOM>
+		<PAN_NO>APDPM3326F</PAN_NO>
+		<AADHAR_NO>212092400492</AADHAR_NO>
+		<MOB_NO>8292801143</MOB_NO>
+		<EMAIL_ID>bimalminz828</EMAIL_ID>
+		<BANK_ACCT_NO>30268041915</BANK_ACCT_NO>
+		<IFSC>0</IFSC>
+		<HOUSE_NO>NA</HOUSE_NO>
+		<VILL>HIRHI TONGRI TOLI</VILL>
+		<PO>HIRHI</PO>
+		<PS>LOHARDAGA</PS>
+		<TEH>LOHARDAGA</TEH>
+		<DIST>Lohardaga</DIST>
+		<STATE>Jharkhand</STATE>
+		<PIN>835302</PIN>
+		<NRS>LOHARDAGA</NRS>
+<FAMILY>
+     <member>
+        <NAME>DEO NATH SINGH</NAME>
+        <GENDER>Male</GENDER>
+        <DOB>1972-11-13</DOB>
+        <REMARKS>ABCD</REMARKS>
+        <DOM>18-06-1986</DOM>
+        <DOD>18-12-1992</DOD>
+        <RELATION>Father</RELATION>
+     </member>
+     <member>
+        <NAME>PUNAM KUMARI</NAME>
+        <GENDER>Female</GENDER>
+        <DOB>2015-12-18</DOB>
+        <REMARKS>defgad</REMARKS>
+        <DOM>2018-03-31</DOM>
+        <DOD>2010-11-13</DOD>
+        <RELATION>Daughter</RELATION>
+     </member>
+    </FAMILY>
+    <NOK>
+     <nok>
+        <NAME>NEETU KUMARI</NAME>
+        <DOB>1974-08-17</DOB>
+        <RELATION>Daughter</RELATION>
+        <DOM>N/A</DOM>
+        <REMARKS>Married</REMARKS>
+        <AADHAR>584965985625</AADHAR>
+        <PAN>XYZW9876S</PAN>
+        <percentageShare>50</percentageShare>
+      </nok>
+    </NOK>
+    <TYPE_OF_PENSION>Special Family Pension</TYPE_OF_PENSION>
+    <RATE>38000</RATE>
+    <DA>4800</DA>
+	</martyr>
+ 
+</ns1:dtls>

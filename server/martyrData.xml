@@ -1,0 +1,127 @@
+<martyrs>
+  <martyr>
+    <ARMY_NO>1234K</ARMY_NO>
+    <RANK>HAV</RANK>
+    <NAME>RAKESH NAG</NAME>
+    <DOB>1976-01-10</DOB>
+    <DOE>1994-04-25</DOE>
+    <DOD>1994-04-25</DOD>
+    <CASUALTY>BC</CASUALTY>
+    <PPO_NO>PPO12345678</PPO_NO>
+    <MARTIAL_STATUS>Single</MARTIAL_STATUS>
+    <DOM>2006-04-25</DOM>
+    <PAN_NO>ABCDE3010D</PAN_NO>
+    <AADHAR_NO>1234-5678-9012</AADHAR_NO>
+    <MOB_NO>987610</MOB_NO>
+    <EMAIL_ID>rakesh.nag@example.com</EMAIL_ID>
+    <BANK_ACCT_NO>543216598447</BANK_ACCT_NO>
+    <IFSC>ABCD1234</IFSC>
+    <HOUSE_NO>123</HOUSE_NO>
+    <VILL>KHELGAON</VILL>
+    <PO>RATUROAD</PO>
+    <PS>RATUROAD</PS>
+    <TEH>RANCHI</TEH>
+    <DIST>Ranchi</DIST>
+    <STATE>Jharkhand</STATE>
+    <PIN>830360</PIN>
+    <NRS>GOVIND PUR</NRS>
+    <FAMILY>
+     <member>
+        <NAME>Rohan Yadav</NAME>
+        <GENDER>Male</GENDER>
+        <DOB>2002-07-03</DOB>
+        <REMARKS>Toddler</REMARKS>
+        <DOM>N/A</DOM>
+        <DOD>N/A</DOD>
+        <RELATION>Son</RELATION>
+     </member>
+     <member>
+        <NAME>Sheetal</NAME>
+        <GENDER>Female</GENDER>
+        <DOB>2002-07-03</DOB>
+        <REMARKS>Toddler</REMARKS>
+        <DOM>N/A</DOM>
+        <DOD>N/A</DOD>
+        <RELATION>Son</RELATION>
+     </member>
+    </FAMILY>
+    <NOK>
+     <nok>
+        <NAME>BUBHUN DEVI</NAME>
+        <DOB>1934-07-15</DOB>
+        <RELATION>Daughter-in-law</RELATION>
+        <DOM>N/A</DOM>
+        <REMARKS>Married</REMARKS>
+        <AADHAR>8765-4321-0986</AADHAR>
+        <PAN>XYZW9876S</PAN>
+        <percentageShare>50</percentageShare>
+      </nok>
+    </NOK>
+    <TYPE_OF_PENSION>Special Family Pension</TYPE_OF_PENSION>
+    <RATE>38000</RATE>
+    <DA>4800</DA>
+  </martyr>
+  <martyr>
+    <ARMY_NO>126K</ARMY_NO>
+    <RANK>HAV</RANK>
+    <NAME>RAKESH NAG</NAME>
+    <DOB>1976-01-10</DOB>
+    <DOE>1994-04-25</DOE>
+    <DOD>1994-04-25</DOD>
+    <CASUALTY>BC</CASUALTY>
+    <PPO_NO>PPO12345678</PPO_NO>
+    <MARTIAL_STATUS>Single</MARTIAL_STATUS>
+    <DOM>2006-04-25</DOM>
+    <PAN_NO>ABCDE3010D</PAN_NO>
+    <AADHAR_NO>1234-5678-9012</AADHAR_NO>
+    <MOB_NO>987610</MOB_NO>
+    <EMAIL_ID>rakesh.nag@example.com</EMAIL_ID>
+    <BANK_ACCT_NO>543216598447</BANK_ACCT_NO>
+    <IFSC>ABCD1234</IFSC>
+    <HOUSE_NO>123</HOUSE_NO>
+    <VILL>KHELGAON</VILL>
+    <PO>RATUROAD</PO>
+    <PS>RATUROAD</PS>
+    <TEH>RANCHI</TEH>
+    <DIST>Ranchi</DIST>
+    <STATE>Jharkhand</STATE>
+    <PIN>830360</PIN>
+    <NRS>GOVIND PUR</NRS>
+    <FAMILY>
+     <member>
+        <NAME>Rohan Yadav</NAME>
+        <GENDER>Male</GENDER>
+        <DOB>2002-07-03</DOB>
+        <REMARKS>Toddler</REMARKS>
+        <DOM>N/A</DOM>
+        <DOD>N/A</DOD>
+        <RELATION>Son</RELATION>
+     </member>
+     <member>
+        <NAME>Sheetal</NAME>
+        <GENDER>Female</GENDER>
+        <DOB>2002-07-03</DOB>
+        <REMARKS>Toddler</REMARKS>
+        <DOM>N/A</DOM>
+        <DOD>N/A</DOD>
+        <RELATION>Son</RELATION>
+     </member>
+    </FAMILY>
+    <NOK>
+     <nok>
+        <NAME>BUBHUN DEVI</NAME>
+        <DOB>1934-07-15</DOB>
+        <RELATION>Daughter-in-law</RELATION>
+        <DOM>N/A</DOM>
+        <REMARKS>Married</REMARKS>
+        <AADHAR>8765-4321-0986</AADHAR>
+        <PAN>XYZW9876S</PAN>
+        <percentageShare>50</percentageShare>
+      </nok>
+    </NOK>
+    <TYPE_OF_PENSION>Special Family Pension</TYPE_OF_PENSION>
+    <RATE>38000</RATE>
+    <DA>4800</DA>
+  </martyr>
+ 
+</martyrs>

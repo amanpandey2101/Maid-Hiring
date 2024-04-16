@@ -1,0 +1,49 @@
+[
+  {
+    "sectionName": "Dashboard",
+    "routes": [
+      {
+        "path": "filterData",
+        "name": "Filter Data"
+      },
+      {
+        "path": "addData",
+        "name": "Add Data"
+      },
+      {
+        "path": "martyrs",
+        "name": "Martyrs"
+      }
+    ]
+  },
+  {
+    "sectionName": "Add and Manage Benefits",
+    "routes": [
+      {
+        "path": "terminalBenefitsArmy",
+        "name": "Terminal Benefits Army"
+      },
+      {
+        "path": "terminalBenefitsCentral",
+        "name": "Terminal Benefits Central"
+      },
+      {
+        "path": "pcBenefits",
+        "name": "PC Benefits"
+      },
+      {
+        "path": "bcBenefits",
+        "name": "BC Benefits"
+      }
+    ]
+  },
+  {
+    "sectionName": "Benefit Details",
+    "routes": [
+      {
+        "path": "benefitDetails",
+        "name": "Benefit Details"
+      }
+    ]
+  }
+]

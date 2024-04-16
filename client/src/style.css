@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar-brand img{
+    width: 200px;
+}
+
+.navbarbg ul li {
+    font-size: 22px;
+    font-weight: 600;
+    
+}
+
+
+
+.footer-bg{
+    background-color: #3f3e3f;
+    color: white;
+    
+}
+.f-top{
+    background-color: #4ABD5D;
+}
+.f_logo{
+    color: #4ABD5D;
+    font-weight: 700;
+}
+.footer-bg ul li {
+ text-decoration: none ;
+ list-style-type: none;
+ color: white !important;
+ 
+}
+.carousel-inner img{
+    height: 600px;
+}
+@media (min-width:360px) and (max-width:768px) {
+    .carousel-inner img {
+        height: 200px;
+    }
+  }
+.box{
+    background-color: #515154;
+    padding: 50px;
+    
+}
+.box img{
+    width: 100px;
+}
+.sec2{
+    background-color: #F0F5FF;
+}
+h5{
+   color: #4ABD5D;
+}
+.profile img {
+    width: 50%;
+}
+.vision{
+    width: 600px;
+}
+
+#s3{
+    background-color: rgb(54, 53, 53);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    background-blend-mode: multiply;
+    padding-top: 8%;
+    padding-bottom: 4%;
+}
