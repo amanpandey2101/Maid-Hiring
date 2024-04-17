@@ -45,16 +45,19 @@ export default function Login() {
 
         Cookies.set("token", response.token, {
           expires: 1,
-          domain: "178.16.138.144",
+          domain: "https://maid-hiring.vercel.app/",
         });
         Cookies.set("role", response.user.role, { domain: "178.16.138.144" });
         Cookies.set("username", response.user.firstName, {
-          domain: "178.16.138.144",
+          domain: "https://maid-hiring.vercel.app/",
         });
         Cookies.set("adminId", response.user.adminId, {
-          domain: "178.16.138.144",
+          domain: "https://maid-hiring.vercel.app/",
         });
-        Cookies.set("id", response.user._id, { domain: "178.16.138.144" });
+        Cookies.set("status", response.user.status, {
+          domain: "https://maid-hiring.vercel.app/",
+        });
+        Cookies.set("id", response.user._id, { domain: "https://maid-hiring.vercel.app/" });
 
         Cookies.set("token", response.token, {
           expires: 1,
@@ -159,7 +162,7 @@ export default function Login() {
                 </div>
               </form>
               <button
-                className="flex justify-center gap-2 w-60 pt-2.5 md:hover:w-64 transition-all delay-200  ease-linear hover:shadow-xl  mx-auto text-white bg-primary-600 bg-[#308e3c] hover:bg-[#2a6f33] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-md px-5  text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                className="flex justify-center gap-2 w-60 pt-2 pb-2 md:hover:w-64 transition-all delay-200  ease-linear hover:shadow-xl  mx-auto text-white bg-primary-600 bg-[#308e3c] hover:bg-[#2a6f33] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-md px-5  text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                 onClick={handleLogin}
               >
                 <svg
