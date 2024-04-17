@@ -4,8 +4,8 @@ import Cookies from "js-cookie";
 const token = Cookies.get('token');
 
 // const API_URL = "http://178.16.138.144:4000/api"
-const API_URL = "http://localhost:4000/api"
-// const API_URL = "https://maid-hiring.onrender.com/api"
+// const API_URL = "http://localhost:4000/api"
+const API_URL = "https://maid-hiring.onrender.com/api"
 const axiosApi = axios.create({
   baseURL: API_URL,
 })
