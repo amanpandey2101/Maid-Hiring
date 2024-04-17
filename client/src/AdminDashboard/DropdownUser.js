@@ -35,8 +35,8 @@ const DropdownUser = () => {
     return () => document.removeEventListener('keydown', keyHandler);
   });
   const handleLogout = () =>{
-    Cookies.remove("token")
-    Cookies.remove("role")
+    Cookies.remove("token", { domain: "maid-hiring.vercel.app"})
+    Cookies.remove("role",  { domain: "maid-hiring.vercel.app"})
     navigate('/')
   }
 

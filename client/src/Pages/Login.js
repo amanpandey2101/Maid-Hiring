@@ -61,8 +61,7 @@ export default function Login() {
           domain: "maid-hiring.vercel.app",
           secure: true,
         });
-        Cookies.set("id", response.user._id, { domain: "maid-hiring.vercel.app" ,  secure: true,});
-
+       
         Cookies.set("token", response.token, {
           expires: 1,
           domain: "localhost",
@@ -75,7 +74,7 @@ export default function Login() {
           domain: "localhost",
         });
       
-        Cookies.set("id", response.user._id, { domain: "localhost" });
+       
         Swal.fire({
           icon: "success",
           title: "Login Successful!",

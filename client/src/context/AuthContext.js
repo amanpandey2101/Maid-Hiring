@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
 
   const handleLogout = () => {
     setIsLoggedIn(false);
-    Cookies.remove("session");
+    Cookies.remove("session",  { domain: "maid-hiring.vercel.app"});
     setUserData(null);
   };
 

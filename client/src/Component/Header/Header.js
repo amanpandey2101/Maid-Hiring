@@ -6,8 +6,8 @@ export default function Header() {
   const token = Cookies.get("token");
   const role = Cookies.get("role");
   const handleLogOut = () => {
-    Cookies.remove("token");
-    Cookies.remove("role");
+    Cookies.remove("token", { domain: "maid-hiring.vercel.app"});
+    Cookies.remove("role",  { domain: "maid-hiring.vercel.app"});
     window.location.href = "/";
   };
   return (

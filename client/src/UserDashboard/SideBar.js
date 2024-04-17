@@ -49,8 +49,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
     }
   }, [sidebarExpanded]);
   const handleLogOut = () => {
-    Cookies.remove("token");
-    Cookies.remove("role");
+    Cookies.remove("token",  { domain: "maid-hiring.vercel.app"});
+    Cookies.remove("role",  { domain: "maid-hiring.vercel.app"});
     window.location.href = "/";
   };
   return (
