@@ -22,13 +22,13 @@ export default function Home() {
           pagination={{ clickable: true }}
         >
           <SwiperSlide>
-          <img src="./../img/1.jpg" className="d-block w-full h-[70vh]" alt="..." />
+          <img src="./../img/1.jpg" className="d-block w-full md:h-[70vh] h-[50vh]" alt="..." />
           </SwiperSlide>
           <SwiperSlide>
-          <img src="./../img/2.jpg" className="d-block w-full h-[70vh] " alt="..." />
+          <img src="./../img/2.jpg" className="d-block w-full md:h-[70vh] h-[50vh]" alt="..." />
           </SwiperSlide>
           <SwiperSlide>
-          <img src="./../img/3.jpeg" className="d-block w-full h-[70vh]" alt="..." />
+          <img src="./../img/3.jpeg" className="d-block w-full md:h-[70vh] h-[50vh]" alt="..." />
           </SwiperSlide>
          
        
