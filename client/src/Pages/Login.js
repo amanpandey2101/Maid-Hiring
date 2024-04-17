@@ -1,11 +1,10 @@
 import { useState } from "react";
-
-import { Link } from "react-router-dom";
 import { post } from "../helpers/api_helper";
 import logo from "../assets/logo.png"
-import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import Cookies from "js-cookie";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -39,6 +38,9 @@ export default function Login() {
     try {
       setIsLoading(true);
       const response = await post(apiEndpoint, user);
+      if(!response){
+        toast.error(response.message)
+      }
 
       if (response) {
       
@@ -100,12 +102,14 @@ export default function Login() {
       setIsLoading(false);
     } catch (error) {
       console.error(error);
+      toast.error("Invalid Credentials/Server Error")
       setIsLoading(false);
     }
   };
 
   return (
     <>
+    <ToastContainer/>
       <div className=" flex  justify-center">
         <div className="flex flex-col  justify-center  py-8 lg:mx-auto h-screen lg:py-0">
           <div className="flex flex-row shadow rounded-2xl md:mt-0 sm:max-w-md">
