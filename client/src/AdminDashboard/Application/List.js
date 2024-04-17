@@ -38,7 +38,7 @@ const ApplicationList = ({ currentItems, handleUpdateStatus }) => {
 
 
   return (
-    <div className=" overflow-x-auto">
+    <div className=" overflow-x-auto ">
       <table className="divide-y divide-gray-200  ">
         <thead className="bg-green-500 ">
           <tr>

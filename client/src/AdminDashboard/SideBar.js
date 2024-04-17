@@ -3,6 +3,8 @@ import { NavLink, useLocation } from "react-router-dom";
 import SidebarLinkGroup from "./SidebarLinkGroup";
 import Navigation from "../constants/section";
 import Cookies from "js-cookie";
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const location = useLocation();
@@ -50,14 +52,40 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   }, [sidebarExpanded]);
 
   return (
+    <>
+    {sidebarOpen?(
+      <div>
+         <button
+        onClick={() => setSidebarOpen(false)}
+        aria-controls="sidebar"
+        aria-expanded={sidebarOpen}
+        className="lg:hidden   absolute top-[50%]  z-50 bg-green-500 py-4 px-1 rounded-r-xl shadow-lg transition-all ease-linear duration-300  " 
+      
+      >
+        <IoIosArrowBack className="fill-current" color="white" />
+      </button>
+      </div>
+    ):(
+      <>
+     <button
+        onClick={() => setSidebarOpen(true)}
+        aria-controls="sidebar"
+        aria-expanded={sidebarOpen}
+        className="lg:hidden   absolute top-[50%]  z-50 bg-green-500 py-4 px-1 rounded-r-xl shadow-2xl transition-all ease-in-out duration-300" 
+      
+      >
+        <IoIosArrowForward className="fill-current" color="white" />
+      </button>
+      </>
+    )}
     <aside
       ref={sidebar}
-      className={`absolute left-0 top-0 z-40 flex h-screen flex-col overflow-y-hidden bg-gray-100 duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 shadow-2xl shadow-gray-500 w-72 ${
+      className={`absolute left-0 top-0 z-40 flex h-screen flex-col overflow-y-hidden mt-20 bg-gray-100  duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 shadow-2xl shadow-gray-500 w-72 ${
         sidebarOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
       {/* <!-- SIDEBAR HEADER --> */}
-      <div className="flex items-center justify-between gap-2 6 w-52 py-5.5 lg:py-6.5 ">
+      <div className="flex items-center justify-between gap-2 6 w-52 py-5.5 lg:py-6.5  ">
         {/* <NavLink to="/">
           <img
             className="h-12"
@@ -237,6 +265,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
         </nav>
       </div>
     </aside>
+    </>
   );
 };
 

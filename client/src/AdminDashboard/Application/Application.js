@@ -66,7 +66,7 @@ const ApplicationList = () => {
   };
 
   return (
-    <div className="m-4">
+    <div className="m-4 pt-20 ">
       <div>
         <h1 className="text-2xl font-semibold mb-4 ">Applications</h1>
         <div className="mb-6">

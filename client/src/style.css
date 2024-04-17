@@ -43,10 +43,12 @@
 .box{
     background-color: #515154;
     padding: 50px;
+    height: 26rem;
     
 }
 .box img{
     width: 100px;
+  
 }
 .sec2{
     background-color: #F0F5FF;
