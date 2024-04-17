@@ -87,12 +87,12 @@ export default function Header() {
                   <>
                     <Link
                       to={`${role}Dashboard/application`}
-                      className="nav-link text-black hover:bg-red-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium border-[1.5px] border-red-600"
+                      className="nav-link text-white bg-violet-400  px-3 py-2 rounded-md text-sm font-medium border-[1.5px] border-violet-600 shadow-xl"
                     >
                       Dashboard
                     </Link>
                     <Link
-                      className="nav-link text-black hover:bg-red-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium border-[1.5px] border-red-600"
+                      className="nav-link text-black hover:bg-red-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium border-[1.5px] border-red-600 shadow-xl"
                       onClick={handleLogOut}
                       to="/"
                     >

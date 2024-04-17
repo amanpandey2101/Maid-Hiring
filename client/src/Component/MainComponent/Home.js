@@ -1,68 +1,38 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import "swiper/css";
 
 export default function Home() {
   return (
     <React.Fragment>
       <div className="container mx-auto pt-24">
-        <div className="carousel slide" data-bs-ride="false">
-          <div className="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="0"
-              className="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-          </div>
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src="./../img/1.jpg" className="d-block w-full" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src="./../img/2.jpg" className="d-block w-full" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src="./../img/3.jpeg" className="d-block w-full" alt="..." />
-            </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
+     
+        <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        autoplay={{ delay: 2000 }}
+          spaceBetween={50}
+          slidesPerView={1}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+          pagination={{ clickable: true }}
+        >
+          <SwiperSlide>
+          <img src="./../img/1.jpg" className="d-block w-full h-[70vh]" alt="..." />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img src="./../img/2.jpg" className="d-block w-full h-[70vh] " alt="..." />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img src="./../img/3.jpeg" className="d-block w-full h-[70vh]" alt="..." />
+          </SwiperSlide>
+         
+       
+        </Swiper>
         {/* end of slider */}
 
         <div className="container mx-auto px-4 py-5 text-center text-white">

@@ -2,19 +2,27 @@ import React from "react";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import {post} from '../helpers/api_helper'
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import ClipLoader from "react-spinners/ClipLoader";
 export default function Contact() {
   const form = useRef();
 
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false);
   const sendData = async (userData) => {
     try {
+      setLoading(true)
       const response = await post("/user/signup", userData);
-      if (response.status === 200) {
-        setSuccessMessage("Your registration was successful!");
-      }
+      toast.success("Your Application has been sent successfully!")
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      window.location.href="/login"
+      setLoading(false)
     } catch (error) {
       setErrorMessage("An error occurred. Please try again later.");
+      toast.error("Error Occurred!")
+      setLoading(false)
     }
   };
   const handleSubmit = (e) => {
@@ -26,6 +34,7 @@ export default function Contact() {
   };
   return (
     <>
+    <ToastContainer/>
       <div className="container-fluid bg-success p-4 text-white text-center ">
         <div className="container mt-20">
           <h1>Register Now</h1>
@@ -170,7 +179,8 @@ export default function Contact() {
               placeholder="Type your message"
             ></textarea>
             <button type="submit" className="btn btn-success mt-4">
-              Register
+
+              Register {loading?<ClipLoader color="white" size={20}  className="relative top-1"/>:""}
             </button>
           </div>
         </form>
