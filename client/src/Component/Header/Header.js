@@ -66,10 +66,10 @@ export default function Header() {
               <div className="flex  gap-2 relative left-48">
                 {!token ? (
                   <>
-                    <li className="nav-item">
+                    <li className="">
                       <Link
                         to="/login"
-                        className="nav-link text-black hover:text-white hover:bg-green-500 px-3 py-2 rounded-md text-sm font-medium border-[1.5px] border-black"
+                        className="nav-link text-black hover:text-yellow-800 hover:bg-green-500 px-3 py-2 rounded-md text-sm font-medium border-[1.5px] border-black"
                       >
                         Login
                       </Link>
@@ -115,36 +115,36 @@ export default function Header() {
         </div>
  
         {isOpen && (
-          <div className="md:hidden fixed z-50 bg-white w-44 right-0">
+          <div className="md:hidden fixed z-50 bg-green-500 shadow-xl w-44 right-0 flex flex-col justify-center">
             <ul className="text-center w-40">
               <li>
-                <Link to="/" className="block py-2 px-4  no-underline text-black hover:bg-green-500 rounded-md hover:text-white  ">Home</Link>
+                <Link to="/" className="block py-2 px-4  no-underline text-white hover:bg-green-500 rounded-md hover:text-white  ">Home</Link>
               </li>
               <li>
-                <Link to="/About" className="block py-2 px-4  no-underline  text-black  hover:bg-green-500 rounded-md hover:text-white ">About</Link>
+                <Link to="/About" className="block py-2 px-4  no-underline  text-white  hover:bg-green-500 rounded-md hover:text-white ">About</Link>
               </li>
               <li>
-                <Link to="/Service" className="block py-2 px-4  no-underline  text-black  hover:bg-green-500 rounded-md hover:text-white ">Service</Link>
+                <Link to="/Service" className="block py-2 px-4  no-underline  text-white  hover:bg-green-500 rounded-md hover:text-white ">Service</Link>
               </li>
               <li>
-                <Link to="/Contact" className="block py-2 px-4  no-underline  text-black  hover:bg-green-500 rounded-md hover:text-white ">Contact</Link>
+                <Link to="/Contact" className="block py-2 px-4  no-underline  text-white hover:bg-green-500 rounded-md hover:text-white ">Contact</Link>
               </li>
               {!token ? (
                 <>
                   <li>
-                    <Link to="/login" className="block py-2 px-4  no-underline  text-black  hover:bg-green-500 rounded-md hover:text-white ">Login</Link>
+                    <Link to="/login" className="block py-2 px-4  no-underline  text-white  hover:bg-green-500 rounded-md hover:text-white ">Login</Link>
                   </li>
                   <li>
-                    <Link to="/register" className="block py-2 px-4 no-underline  text-black  hover:bg-green-500 rounded-md hover:text-white ">Register</Link>
+                    <Link to="/register" className="block py-2 px-4 no-underline  text-white  hover:bg-green-500 rounded-md hover:text-white ">Register</Link>
                   </li>
                 </>
               ) : (
                 <>
                   <li>
-                    <Link to={`${role}Dashboard/application`} className="block py-2 px-4 no-underline text-black  hover:bg-green-500 rounded-md hover:text-white ">Dashboard</Link>
+                    <Link to={`${role}Dashboard/application`} className="block py-2 px-4  no-underline  text-white hover:bg-green-500 rounded-md hover:text-white ">Dashboard</Link>
                   </li>
                   <li>
-                    <button onClick={handleLogOut} className="block py-2 px-4 no-underline  text-black  hover:bg-green-500 rounded-md hover:text-white">Logout</button>
+                    <button onClick={handleLogOut} className="block py-2 px-4 ml-4 no-underline  text-white  hover:bg-green-500 rounded-md hover:text-white">Logout</button>
                   </li>
                 </>
               )}

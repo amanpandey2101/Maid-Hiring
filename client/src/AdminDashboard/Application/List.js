@@ -42,45 +42,45 @@ const ApplicationList = ({ currentItems, handleUpdateStatus }) => {
       <table className="divide-y divide-gray-200  ">
         <thead className="bg-green-500 ">
           <tr>
-            <th className="px-4 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-xs md:font-medium text-white uppercase tracking-wider">
               #
             </th>
-            <th className="px-4 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-xs md:font-medium font-normal text-white uppercase tracking-wider">
               Maid Name
             </th>
-            <th className="px-4 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-xs  md:font-medium font-normal text-white uppercase tracking-wider">
               Email
             </th>
-            <th className="px-4 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-xs  md:font-medium font-normal text-white uppercase tracking-wider">
               Mobile
             </th>
-            <th className="px-4 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-xs  md:font-medium font-normal text-white uppercase tracking-wider">
               Address
             </th>
-            <th className="px-4 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-xs  md:font-medium font-normal text-white uppercase tracking-wider">
               City
             </th>
-            <th className="px-4 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-xs  md:font-medium font-normal text-white uppercase tracking-wider">
               State
             </th>
-            <th className="px-4 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-xs  md:font-medium font-normal text-white uppercase tracking-wider">
               Pincode
             </th>
-            <th className="px-4 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-xs  md:font-medium font-normal text-white uppercase tracking-wider">
               Gender
             </th>
-            <th className="px-4 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-xs  md:font-medium font-normal text-white uppercase tracking-wider">
               Message
             </th>
-            <th className="px-4 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-xs  md:font-medium font-normal text-white uppercase tracking-wider">
               Status
             </th>
-            <th className="px-4 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-xs  md:font-medium font-normal text-white uppercase tracking-wider">
               Action
             </th>
           </tr>
         </thead>
-        <tbody className="bg-white divide-y divide-gray-200">
+        <tbody className="bg-white divide-y divide-gray-200 max-[768px]:text-xs">
           {currentItems.map((application, index) => {
             return (
               <tr key={index}>
@@ -162,7 +162,13 @@ const ApplicationList = ({ currentItems, handleUpdateStatus }) => {
                 <td className="px-4 py-4 whitespace-nowrap">
                   <button
                     onClick={() => handleOpenStatusModal()}
-                    className={`${application.status ==="Pending"?"text-red-600 font-medium border-2 border-red-500 p-1 rounded-md":"text-green-600 font-medium border-2 border-green-600 p-1 rounded-md"}`}
+                    className={`font-medium border-[1.5px] p-1 rounded-md ${
+                      application.status === "Pending"
+                        ? "text-orange-600 border-orange-500"
+                        : application.status === "Approved"
+                        ? "text-green-600 border-green-600"
+                        : "text-red-600 border-red-500"
+                    }`}
                   >
                     {application.status}
                   </button>
@@ -222,7 +228,10 @@ const ApplicationList = ({ currentItems, handleUpdateStatus }) => {
                         <Button
                           variant="contained"
                           color="success"
-                          onClick={() => handleUpdateStatus(application._id, selectedStatus)} 
+                          onClick={() => {
+                            handleUpdateStatus(application._id, selectedStatus) 
+                            setOpenStatus(false)
+                          }} 
                         >
                           Update
                         </Button>

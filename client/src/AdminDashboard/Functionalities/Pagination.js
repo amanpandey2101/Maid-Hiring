@@ -14,7 +14,7 @@ const TablePagination = ({
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mt-5">
       <Pagination
         shape="rounded"
         size="large"

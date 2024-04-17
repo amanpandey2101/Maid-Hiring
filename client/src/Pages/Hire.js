@@ -26,8 +26,8 @@ export default function Contact() {
   };
   return (
     <>
-      <div className="container-fluid bg-success p-4 text-white text-center">
-        <div className="container">
+      <div className="container-fluid bg-success p-4 text-white text-center ">
+        <div className="container mt-20">
           <h1>Register Now</h1>
         </div>
       </div>
@@ -175,6 +175,7 @@ export default function Contact() {
           </div>
         </form>
       </div>
+    
     </>
   );
 }

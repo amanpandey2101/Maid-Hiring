@@ -10,13 +10,13 @@ import Service from "./Component/MainComponent/Service";
 import Hire from "./Pages/Hire";
 import Login from "./Pages/Login";
 import { Routes, Route, useLocation } from "react-router-dom";
-import Register from "./Pages/Register";
 import UserDashboard from "./UserDashboard";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoutes from "./routes/ProtectedRoutes";
 import Status from "./UserDashboard/Application/Status";
 import AdminDashboard from "./AdminDashboard"
 import ApplicationList from "./AdminDashboard/Application/Application";
+import ScrollToTop from "./Utilities/ScrollToTop";
 function App() {
   const location = useLocation();
 
@@ -56,6 +56,7 @@ function App() {
 
         {shouldRenderNavbarAndFooter && <Footer />}
       </AuthProvider>
+      <ScrollToTop/>
     </div>
   );
 }

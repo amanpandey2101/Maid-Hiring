@@ -5,15 +5,16 @@ import CardGroup from 'react-bootstrap/CardGroup';
 export default function Service() {
   return (
     <>
-    <div className="container-fluid bg-success p-5 text-white text-center">
-        <div className="container py-5">
+
+    <div className=" bg-success p-2 relative top-20  shadow-xl text-white text-center">
+        <div className="mb-10 ">
      <h1>Our Services</h1>
 </div>
     
     </div>
 
       
-    <div className="container-fluid ">
+    <div className="container-fluid mt-5 ">
       
       <div className="row py-5 mt-4 px-4 text-center text-white ">
 

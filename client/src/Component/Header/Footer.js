@@ -33,7 +33,7 @@ export default function Footer() {
                          keepers/sitters/patient consideration staff ? Band together with us 
                         and bring in additional cash</p>
                         
-                        <Link to="/Hire" className='btn btn-success'>Register witn Us</Link>
+                        <Link to="/register" className='btn btn-success'>Register witn Us</Link>
                         
                    </div>
                 <div className="col-md-3">
