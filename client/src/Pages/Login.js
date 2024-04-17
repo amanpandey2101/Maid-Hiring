@@ -46,18 +46,22 @@ export default function Login() {
         Cookies.set("token", response.token, {
           expires: 1,
           domain: "https://maid-hiring.vercel.app/",
+          secure: true,
         });
-        Cookies.set("role", response.user.role, { domain: "178.16.138.144" });
+        Cookies.set("role", response.user.role, { domain: "https://maid-hiring.vercel.app/", secure: true });
         Cookies.set("username", response.user.firstName, {
           domain: "https://maid-hiring.vercel.app/",
+          secure: true,
         });
         Cookies.set("adminId", response.user.adminId, {
           domain: "https://maid-hiring.vercel.app/",
+          secure: true,
         });
         Cookies.set("status", response.user.status, {
           domain: "https://maid-hiring.vercel.app/",
+          secure: true,
         });
-        Cookies.set("id", response.user._id, { domain: "https://maid-hiring.vercel.app/" });
+        Cookies.set("id", response.user._id, { domain: "https://maid-hiring.vercel.app/" ,  secure: true,});
 
         Cookies.set("token", response.token, {
           expires: 1,
