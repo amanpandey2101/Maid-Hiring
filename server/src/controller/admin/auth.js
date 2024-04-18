@@ -2,12 +2,11 @@ const User = require("../../models/user");
 
 const jwt = require("jsonwebtoken");
 
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcrypt");
 
 exports.signup = async (req, res) => {
   try {
     const { firstName, lastName, email, password } = req.body;
-
 
     const existingAdmin = await User.findOne({ email }).exec();
     if (existingAdmin) {
@@ -16,15 +15,12 @@ exports.signup = async (req, res) => {
       });
     }
 
-   
-
     const newAdmin = new User({
       firstName,
       lastName,
       email,
       password,
       role: "admin",
-     
     });
 
     await newAdmin.save();
@@ -55,18 +51,21 @@ exports.signin = (req, res) => {
             lastName,
             email,
             role,
-            adminId,
+
             fullName,
-            blocked,
-            frozenUntil,
           } = user;
           const token = jwt.sign(
-            { _id: user._id, role: user.role, firstName: user.firstName, lastName:user.lastName, adminId:user.adminId },
+            {
+              _id: user._id,
+              role: user.role,
+              firstName: user.firstName,
+              lastName: user.lastName,
+            },
             process.env.JWT_SECRET,
             { expiresIn: "1d" }
           );
 
-          return res.status(201).json({ 
+          return res.status(201).json({
             token,
             user: {
               _id,
@@ -74,14 +73,12 @@ exports.signin = (req, res) => {
               lastName,
               email,
               role,
-              adminId,
+
               fullName,
-              blocked,
-              frozenUntil,
             },
           });
         } else {
-          return res.status(400).json({
+          return res.status(400).json({ 
             message: "Invalid Password!",
           });
         }
@@ -98,13 +95,11 @@ exports.addData = async (req, res) => {
     const newMartyr = new Martyr(newMartyrData);
     await newMartyr.save();
 
-    res
-      .status(201)
-      .json({
-        message: "Martyr created successfully",
-        martyr: newMartyr,
-        status: "1",
-      });
+    res.status(201).json({
+      message: "Martyr created successfully",
+      martyr: newMartyr,
+      status: "1",
+    });
   } catch (error) {
     console.error("Create martyr error:", error);
     res.status(500).json({ error: "Failed to create martyr" });

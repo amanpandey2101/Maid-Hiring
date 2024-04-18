@@ -7,7 +7,7 @@ exports.validateSignupRequest = [
     check('lastName').notEmpty().withMessage('lastName is required'),
     check('email').isEmail().withMessage('Valid Email is required'),
     check('password').isLength({min : 6}).withMessage('Password must be at least 6 characters long')
-]
+] 
 exports.validateSigninRequest = [
 
     check('email').isEmail().withMessage('Valid Email is required'),

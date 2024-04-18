@@ -13,7 +13,7 @@ exports.signup = (req, res) => {
       }
       const {
         firstName,
-        lastName,
+        lastName, 
         email,
         phone,
         password,

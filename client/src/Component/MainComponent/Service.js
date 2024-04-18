@@ -38,8 +38,8 @@ export default function Service() {
         <div className="col-md-4  p-2">
         <div className="box">
         <img src="./../img/home_pannel_Icon3.png" alt="" />
-          <h3>Japa Maid / Baby Massager</h3>
-            <p>Experienced Japa maids for your new born</p>
+          <h3>Married Couple Work</h3>
+            <p>Experienced married couple for your new born</p>
             <a href="#" className='btn-lg btn btn-outline-success text-white '>Book Now</a>          </div>
         </div>
       </div>
@@ -53,8 +53,8 @@ export default function Service() {
 trained specifically for your needs</h2>
 <p className='text-muted fs-4 mt-3'>Broomees offers completely certified workers with an unlimited replacement policy</p>
 <br />
-<div className="row d-flex justify-content-around ">
-  <div className="col-md-3 me-2 p-5 border border-success rounded">
+<div className="flex md:flex-row flex-col justify-around  gap-3 ">
+  <div className=" col-md-3  p-5 border border-success rounded">
    <img src="./../img/p1.png" alt="" />
    <h4>Domestic Help</h4>
   </div>
@@ -65,6 +65,10 @@ trained specifically for your needs</h2>
   <div className="col-md-3 p-5 border border-success rounded">
   <img src="./../img/p3.png" alt="" />
    <h4>babysitter/ Japa</h4>
+  </div>
+  <div className="col-md-3 p-5 border border-success rounded">
+  <img src="./../img/elderly-care.png" alt="" />
+   <h4>Elderly Care</h4>
   </div>
 </div>
       </div>

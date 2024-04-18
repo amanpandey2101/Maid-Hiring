@@ -78,8 +78,8 @@ export default function Home() {
                   alt=""
                   className="mx-auto"
                 />
-                <h3 className="mt-3">Japa Maid / Baby Massager</h3>
-                <p>Experienced Japa maids for your newborn</p>
+                <h3 className="mt-3">Married Couple Work</h3>
+                <p>Experienced Married Couple for your newborn</p>
                 <a
                   href="#"
                   className="btn-lg btn btn-outline-success text-white "
@@ -142,7 +142,7 @@ export default function Home() {
             Broomees offers completely certified workers with an unlimited
             replacement policy
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-items-center">
             <div className="me-2 p-5 border border-success rounded">
               <img src="./../img/p1.png" alt="" className="mx-auto" />
               <h4>Domestic Help</h4>
@@ -155,6 +155,10 @@ export default function Home() {
               <img src="./../img/p3.png" alt="" className="mx-auto" />
               <h4>babysitter/ Japa</h4>
             </div>
+            <div className="p-5 border border-success rounded">
+              <img src="./../img/elderly-care.png" alt="" className="mx-auto h-60" />
+              <h4>Elderly Care</h4>
+            </div>
           </div>
         </div>
         {/* end of feature */}
@@ -165,7 +169,7 @@ export default function Home() {
             <div className="container mt-5">
               <div className="container p-5 text-center">
                 <div className="row d-flex justify-content-around text-white gap-2">
-                  <div className="col-md-4  p-5  profile bg-success   ">
+                  <div className="col-md-3  p-5  profile bg-success   ">
                     <img src="./../img/profile.png" alt="" />
                     <h4 className="mt-4">Saurav Josi</h4>
                     <p>
@@ -181,7 +185,7 @@ export default function Home() {
                       domestic helper! Very professional
                     </p>
                   </div>
-                  <div className="col-md-4   p-5  profile bg-success ">
+                  <div className="col-md-3   p-5  profile bg-success ">
                     <img src="./../img/profile.png" alt="" />
                     <h4 className="mt-4">Saurav Josi</h4>
                     <p>

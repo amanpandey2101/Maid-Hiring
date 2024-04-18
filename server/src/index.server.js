@@ -11,7 +11,7 @@ const adminRoutes = require('./routes/admin/auth')
 const applicationRoutes = require('./routes/admin/application')
 env.config({path:'./.env'})
  
-const server = http.createServer(app);
+const server = http.createServer(app); 
 app.use(cors()); 
 
 

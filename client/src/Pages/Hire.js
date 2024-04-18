@@ -16,7 +16,7 @@ export default function Contact() {
       setLoading(true)
       const response = await post("/user/signup", userData);
       toast.success("Your Application has been sent successfully!")
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       window.location.href="/login"
       setLoading(false)
     } catch (error) {
@@ -30,7 +30,7 @@ export default function Contact() {
     const formData = new FormData(form.current);
     const userData = Object.fromEntries(formData.entries());
     sendData(userData);
-    e.target.reset();
+  
   };
   return (
     <>

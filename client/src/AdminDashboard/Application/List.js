@@ -70,6 +70,9 @@ const ApplicationList = ({ currentItems, handleUpdateStatus }) => {
               Gender
             </th>
             <th className="px-4 py-3 text-left text-xs  md:font-medium font-normal text-white uppercase tracking-wider">
+              Job Applied
+            </th>
+            <th className="px-4 py-3 text-left text-xs  md:font-medium font-normal text-white uppercase tracking-wider">
               Message
             </th>
             <th className="px-4 py-3 text-left text-xs  md:font-medium font-normal text-white uppercase tracking-wider">
@@ -110,6 +113,9 @@ const ApplicationList = ({ currentItems, handleUpdateStatus }) => {
                   {application.gender}
                 </td>
                 <td className="px-4 py-4 whitespace-nowrap">
+                  {application.job}
+                </td>
+                <td className="px-4 py-4 whitespace-nowrap"> 
                   <button
                     onClick={() => handleOpenMessageModal()}
                     className="text-white p-1.5 hover:scale-[1.02] rounded-md shadow-xl bg-violet-500 w-20"

@@ -55,10 +55,7 @@ export default function Login() {
           domain: "maid-hiring.vercel.app",
           secure: true,
         });
-        Cookies.set("adminId", response.user.adminId, {
-          domain: "maid-hiring.vercel.app",
-          secure: true,
-        });
+  
         Cookies.set("status", response.user.status, {
           domain: "maid-hiring.vercel.app",
           secure: true,

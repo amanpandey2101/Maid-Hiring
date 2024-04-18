@@ -35,7 +35,7 @@ const userSchema = new mongoose.Schema({
     },
     address:{
         type: String,
-      
+       
     },
     city:{
         type: String,
@@ -66,10 +66,6 @@ const userSchema = new mongoose.Schema({
         enum:['admin', 'user'],
         default:'user'
     },
-    adminId: {
-        type: String,
-        unique: true
-    },
     status:{
         type:String,
         default:'Pending'
@@ -95,17 +91,12 @@ userSchema.pre('save', async function(next) {
         const saltRounds = 10;
         this.password = await bcrypt.hash(this.password, saltRounds); 
     }
-    if(this.isNew && this.role === 'admin') {
-        this.adminId = generateAdminId();
-    }
+  
     next();
 });
 
 userSchema.methods.authenticate = function(password) {
     return bcrypt.compareSync(password, this.password);
 };
-function generateAdminId() {
-    const uniqueId = 'A' + Math.floor(1000 + Math.random() * 9000);
-    return uniqueId;
-}
+
 module.exports = mongoose.model('User', userSchema);
