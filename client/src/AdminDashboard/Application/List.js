@@ -125,7 +125,12 @@ const ApplicationList = ({ currentItems, handleUpdateStatus, currentPage, itemsP
                 </td>
                 <td className="px-4 py-4 whitespace-nowrap"> 
                   <button
-                    onClick={() => handleOpenMessageModal(application)}
+                    onClick={() => {
+                      handleOpenMessageModal(application)
+                      setCurrentUserIndex(currentIndex)
+                    
+                    }                   
+                  }
                     className="text-white p-1.5 hover:scale-[1.02] rounded-md shadow-xl bg-violet-500 w-20"
                   >
                     See
