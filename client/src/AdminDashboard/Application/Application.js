@@ -65,6 +65,7 @@ const ApplicationList = () => {
     setCurrentPage(1);
   };
 
+
   return (
     <div className="m-4 pt-20 ">
       <div>
@@ -86,6 +87,8 @@ const ApplicationList = () => {
               filteredProducts={filteredApplication}
               currentItems={currentItems}
               handleUpdateStatus={handleUpdateStatus}
+              currentPage = {currentPage}
+              itemsPerPage = {itemsPerPage}
             />
           </>
         )}

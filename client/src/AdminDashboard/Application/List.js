@@ -22,20 +22,27 @@ const style = {
   p: 4,
 };
 
-const ApplicationList = ({ currentItems, handleUpdateStatus }) => {
+const ApplicationList = ({ currentItems, handleUpdateStatus, currentPage, itemsPerPage }) => {
   const [openMessage, setOpenMessage] = useState(false);
   const [openStatus, setOpenStatus] = useState(false);
   const [selectedStatus, setSelectedStatus] = useState("");
-
+  const [currentUserIndex, setCurrentUserIndex] = useState(null);
+  const [currentUser, setCurrenUser] = useState(null);
   const handleOpenMessageModal = () => setOpenMessage(true);
   const handleCloseMessageModal = () => setOpenMessage(false);
 
-  const handleOpenStatusModal = () => setOpenStatus(true);
-  const handleCloseStatusModal = () => setOpenStatus(false);
+  const handleOpenStatusModal = (user) => {
+    setOpenStatus(true);
+    setCurrenUser(user)
+  }
+  const handleCloseStatusModal = (user) => {
+    setOpenStatus(false);
+    setCurrenUser(user)
+  }
   const handleStatusChange = (event) => {
     setSelectedStatus(event.target.value);
   };
-
+  
 
   return (
     <div className=" overflow-x-auto ">
@@ -85,9 +92,10 @@ const ApplicationList = ({ currentItems, handleUpdateStatus }) => {
         </thead>
         <tbody className="bg-white divide-y divide-gray-200 max-[768px]:text-xs">
           {currentItems.map((application, index) => {
+                 const currentIndex = (currentPage - 1) * itemsPerPage + index;
             return (
               <tr key={index}>
-                <td className="px-4 py-4 whitespace-nowrap">{index + 1}</td>
+                <td className="px-4 py-4 whitespace-nowrap">{currentIndex+1}</td>
                 <td className="px-4 py-4 whitespace-nowrap">
                   {application.firstName} {application.lastName}
                 </td>
@@ -117,7 +125,7 @@ const ApplicationList = ({ currentItems, handleUpdateStatus }) => {
                 </td>
                 <td className="px-4 py-4 whitespace-nowrap"> 
                   <button
-                    onClick={() => handleOpenMessageModal()}
+                    onClick={() => handleOpenMessageModal(application)}
                     className="text-white p-1.5 hover:scale-[1.02] rounded-md shadow-xl bg-violet-500 w-20"
                   >
                     See
@@ -167,7 +175,7 @@ const ApplicationList = ({ currentItems, handleUpdateStatus }) => {
                 </Modal>
                 <td className="px-4 py-4 whitespace-nowrap">
                   <button
-                    onClick={() => handleOpenStatusModal()}
+                   
                     className={`font-medium border-[1.5px] p-1 rounded-md ${
                       application.status === "Pending"
                         ? "text-orange-600 border-orange-500"
@@ -181,7 +189,11 @@ const ApplicationList = ({ currentItems, handleUpdateStatus }) => {
                 </td>
                 <td className="px-4 py-4 whitespace-nowrap">
                   <button
-                    onClick={() => handleOpenStatusModal()}
+                    onClick={() => {handleOpenStatusModal(application)
+                      console.log(currentIndex)
+                    setCurrentUserIndex(currentIndex)
+                   
+                    }}
                     className="text-white p-1.5 hover:scale-[1.02] rounded-md shadow-xl bg-green-600 hover:bg-green-700 w-20"
                   >
                     Update
@@ -235,7 +247,9 @@ const ApplicationList = ({ currentItems, handleUpdateStatus }) => {
                           variant="contained"
                           color="success"
                           onClick={() => {
-                            handleUpdateStatus(application._id, selectedStatus) 
+                            console.log(application._id)
+                            handleUpdateStatus(currentUser._id, selectedStatus) 
+                            console.log(application._id)
                             setOpenStatus(false)
                           }} 
                         >
