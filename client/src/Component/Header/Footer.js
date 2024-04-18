@@ -39,7 +39,7 @@ export default function Footer() {
                 <div className="col-md-3">
                     <h4>Contact Us</h4>
                    <p>Email : mail@ecohome.co.in</p>
-                   <p>Phone : +91 123456821</p>
+                   <p>Phone : +91 9334625506</p>
                    
                 </div>
             </div>
