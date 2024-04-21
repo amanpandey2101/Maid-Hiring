@@ -28,7 +28,7 @@ export default function Header() {
             <img src="./../img/logo.png" alt="Logo" className="h-12" />
           </Link>
           <div className="hidden md:flex justify-center mx-auto">
-            <ul className="flex space-x-5 justify-between ">
+            <ul className="flex space-x-5 justify-between items-center pt-2">
               <div className="flex gap-2">
                 <li className="nav-item">
                   <Link
@@ -63,7 +63,7 @@ export default function Header() {
                   </Link>
                 </li>
               </div>
-              <div className="flex  gap-2 relative left-48">
+              <div className="flex  gap-2 relative left-36 items-center pt-1">
                 {!token ? (
                   <>
                     <li className="">
