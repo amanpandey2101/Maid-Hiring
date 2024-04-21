@@ -148,7 +148,7 @@ export default function Login() {
                         checked={role === "user"}
                         onChange={() => setRole("user")}
                       />
-                      <span>User</span>
+                      <span>Maid</span>
                     </label>
                   </div>
                   <div>
@@ -160,7 +160,7 @@ export default function Login() {
                         checked={role === "admin"}
                         onChange={() => setRole("admin")}
                       />
-                      <span>Admin</span>
+                      <span>Client</span>
                     </label>
                   </div>
                 </div>

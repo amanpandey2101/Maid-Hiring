@@ -43,7 +43,7 @@
 .box{
     background-color: #515154;
     padding: 50px;
-    height: 26rem;
+    height: 25rem;
     
 }
 .box img{
@@ -57,7 +57,7 @@ h5{
    color: #4ABD5D;
 }
 .profile img {
-    width: 70%;
+   
     margin: auto;
 }
 .vision{

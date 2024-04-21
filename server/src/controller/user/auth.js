@@ -65,10 +65,10 @@ exports.signin = (req, res) => {
       if (error) return res.status(400).json({ message: "Error Occured" });
       if (user) {
         if (user.authenticate(req.body.password) && user.role === "user") {
-          const { _id, firstName, lastName, email, role, fullName, status } =
+          const { _id, firstName, lastName, email, role, fullName, status, adminDetails } =
             user;
           const token = jwt.sign(
-            { _id: user._id, role: user.role },
+            { _id: user._id, role: user.role, adminDetails },
             process.env.JWT_SECRET,
             { expiresIn: "1d" }
           );
@@ -83,6 +83,7 @@ exports.signin = (req, res) => {
               role,
               fullName,
               status,
+              adminDetails
             },
           });
         } else {
@@ -95,3 +96,19 @@ exports.signin = (req, res) => {
       }
     });
 };
+
+exports.getClientDetails = async(req, res)=>{
+try{
+
+  const user = req.user;
+  console.log(user);
+  if(!user){
+    res.status(404).json({message: "User not found!"})
+  }
+
+  res.status(200).json({ user });
+}catch(error){
+  console.log(error);
+  res.status(500).json({message: "Internal server error!"})
+}
+}

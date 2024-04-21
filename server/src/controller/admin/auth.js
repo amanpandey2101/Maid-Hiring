@@ -6,7 +6,18 @@ const bcrypt = require("bcrypt");
 
 exports.signup = async (req, res) => {
   try {
-    const { firstName, lastName, email, password } = req.body;
+    const {
+      firstName,
+      lastName,
+      email,
+      phone,
+      whatsapp,
+      address,
+      state,
+      city,
+      pincode,
+      password,
+    } = req.body;
 
     const existingAdmin = await User.findOne({ email }).exec();
     if (existingAdmin) {
@@ -19,6 +30,12 @@ exports.signup = async (req, res) => {
       firstName,
       lastName,
       email,
+      phone,
+      whatsapp,
+      address,
+      state,
+      city,
+      pincode,
       password,
       role: "admin",
     });
@@ -51,7 +68,8 @@ exports.signin = (req, res) => {
             lastName,
             email,
             role,
-
+            phone,
+            address,
             fullName,
           } = user;
           const token = jwt.sign(
@@ -60,6 +78,9 @@ exports.signin = (req, res) => {
               role: user.role,
               firstName: user.firstName,
               lastName: user.lastName,
+              phone: user.phone,
+              address: user.address,
+          
             },
             process.env.JWT_SECRET,
             { expiresIn: "1d" }
@@ -78,7 +99,7 @@ exports.signin = (req, res) => {
             },
           });
         } else {
-          return res.status(400).json({ 
+          return res.status(400).json({
             message: "Invalid Password!",
           });
         }

@@ -22,13 +22,13 @@ export default function Home() {
           pagination={{ clickable: true }}
         >
           <SwiperSlide>
-          <img src="./../img/1.jpg" className="d-block w-full md:h-[70vh] h-[50vh]" alt="..." />
+          <img src="./../img/1.jpg" className="d-block w-full md:h-[70vh] h-[40vh]" alt="..." />
           </SwiperSlide>
           <SwiperSlide>
-          <img src="./../img/2.jpg" className="d-block w-full md:h-[70vh] h-[50vh]" alt="..." />
+          <img src="./../img/2.jpg" className="d-block w-full md:h-[70vh] h-[40vh]" alt="..." />
           </SwiperSlide>
           <SwiperSlide>
-          <img src="./../img/3.jpeg" className="d-block w-full md:h-[70vh] h-[50vh]" alt="..." />
+          <img src="./../img/3.jpeg" className="d-block w-full md:h-[70vh] h-[40vh]" alt="..." />
           </SwiperSlide>
          
        
@@ -48,7 +48,7 @@ export default function Home() {
                 <p>We provide Indian maids in Dubai and Singapore</p>
                 <a
                   href="#"
-                  className="btn btn-lg btn-outline-success text-white"
+                  className="btn btn-lg btn-outline-success text-white relative top-10"
                 >
                   Book Now
                 </a>
@@ -65,7 +65,7 @@ export default function Home() {
                 <p>Experienced Japa maids for your newborn</p>
                 <a
                   href="#"
-                  className="btn btn-lg btn-outline-success text-white"
+                  className="btn btn-lg btn-outline-success text-white relative top-4"
                 >
                   Book Now
                 </a>
@@ -82,7 +82,7 @@ export default function Home() {
                 <p>Experienced Married Couple for your newborn</p>
                 <a
                   href="#"
-                  className="btn-lg btn btn-outline-success text-white "
+                  className="btn-lg btn btn-outline-success text-white relative top-10"
                 >
                   Book Now
                 </a>
@@ -142,22 +142,22 @@ export default function Home() {
             Broomees offers completely certified workers with an unlimited
             replacement policy
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-items-center items-center">
             <div className="me-2 p-5 border border-success rounded">
               <img src="./../img/p1.png" alt="" className="mx-auto" />
-              <h4>Domestic Help</h4>
+              <h4 className="pt-4">Domestic Help</h4>
             </div>
             <div className="p-5 border border-success rounded">
               <img src="./../img/p2.png" alt="" className="mx-auto" />
-              <h4>Chef/Cook</h4>
+              <h4 className="pt-4">Chef/Cook</h4>
             </div>
             <div className="p-5 border border-success rounded">
               <img src="./../img/p3.png" alt="" className="mx-auto" />
-              <h4>babysitter/ Japa</h4>
+              <h4 className="pt-4">babysitter/ Japa</h4>
             </div>
             <div className="p-5 border border-success rounded">
-              <img src="./../img/elderly-care.png" alt="" className="mx-auto h-60" />
-              <h4>Elderly Care</h4>
+              <img src="./../img/elderly-care.png" alt="" className="mx-auto h-52" />
+              <h4 className="pt-4">Elderly Care</h4>
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@ export default function Home() {
               <div className="container p-5 text-center">
                 <div className="row d-flex justify-content-around text-white gap-2">
                   <div className="col-md-3  p-5  profile bg-success   ">
-                    <img src="./../img/profile.png" alt="" />
+                    <img src="./../img/client1.jpg" alt=""  className="h-32 w-32 rounded-full"/>
                     <h4 className="mt-4">Saurav Josi</h4>
                     <p>
                       e are happy with Eden Grace’s services for our new
@@ -178,16 +178,16 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="col-md-3 p-5  profile bg-success ">
-                    <img src="./../img/profile.png" alt="" />
-                    <h4 className="mt-4">Saurav Josi</h4>
+                    <img src="./../img/client2.jpg" alt=""  className="h-32 w-32 rounded-full"/>
+                    <h4 className="mt-4">Rahul Kumar</h4>
                     <p>
                       e are happy with Eden Grace’s services for our new
                       domestic helper! Very professional
                     </p>
                   </div>
                   <div className="col-md-3   p-5  profile bg-success ">
-                    <img src="./../img/profile.png" alt="" />
-                    <h4 className="mt-4">Saurav Josi</h4>
+                    <img src="./../img/client3.jpg" alt=""  className="h-32 w-32 rounded-full" />
+                    <h4 className="mt-4">Ankita Mishra</h4>
                     <p>
                       e are happy with Eden Grace’s services for our new
                       domestic helper! Very professional

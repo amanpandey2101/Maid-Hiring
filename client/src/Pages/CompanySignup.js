@@ -5,17 +5,17 @@ import {post} from '../helpers/api_helper'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ClipLoader from "react-spinners/ClipLoader";
-export default function Contact() {
+export default function CompanySignup() {
   const form = useRef();
 
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const sendData = async (userData) => {
+  const sendData = async (companyData) => {
     try {
       setLoading(true)
-      const response = await post("/user/signup", userData);
-      toast.success("Your Application has been sent successfully!")
+      const response = await post("/admin/signup", companyData);
+      toast.success("You have been successfully registered as Client!")
       await new Promise((resolve) => setTimeout(resolve, 2000));
       window.location.href="/login"
       setLoading(false)
@@ -28,8 +28,8 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(form.current);
-    const userData = Object.fromEntries(formData.entries());
-    sendData(userData);
+    const companyData = Object.fromEntries(formData.entries());
+    sendData(companyData);
   
   };
   return (
@@ -37,7 +37,7 @@ export default function Contact() {
     <ToastContainer/>
       <div className="container-fluid bg-success p-4 text-white text-center ">
         <div className="container mt-20">
-          <h1>Register as Maid</h1>
+          <h1>Register As a Client</h1>
         </div>
       </div>
       <div className="container  p-5">
@@ -81,6 +81,17 @@ export default function Contact() {
               />{" "}
               <br />
             </div>
+          <div className="row mt-4">
+            <div className="col-md-6">
+              <input
+                type="number"
+                className="form-control"
+                placeholder="Whatsapp Number"
+                name="whatsapp"
+              />{" "}
+              <br />
+            </div>
+            </div>
             <div className="col-md-6">
               <input
                 type="password"
@@ -95,7 +106,7 @@ export default function Contact() {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Address"
+                placeholder="Address/Locality"
                 name="address"
               />{" "}
               <br />
@@ -137,7 +148,7 @@ export default function Contact() {
                 <option value="Tamil Nadu">Tamil nadu</option>
               </select>{" "}
             </div>
-            <div className="col-md-2">
+            <div className="col-md-2 md:mt-0 mt-4">
               <input
                 type="number"
                 className="form-control"
@@ -146,38 +157,10 @@ export default function Contact() {
               />{" "}
               <br />
             </div>
-            <div className="col-md-6">
-              <label htmlFor="">Choose your Suitable Job</label> <br />
-              <select name="job" id="" className="form-select">
-                <option value="">Select Job</option>
-                <option value="Elderly Care">Elderly Care</option>
-                <option value="Babysitter">Babysitter</option>
-                <option value="Cooking">Cooking</option>
-                <option value="Cleaning">Cleaning</option>
-              </select>
-            </div>
-            <div className="col-md-6">
-              <label htmlFor="">Gender</label> <br />
-              <input type="radio" name="gender" value="Male" className="form-check-input mr-2" />
-              <label htmlFor="" className="form-check-label mr-4">
-                {" "}
-                Male
-              </label>
-              <input type="radio" name="gender" value="Female" className="form-check-input mr-2" />
-              <label htmlFor="" className="form-check-label">
-                {" "}
-                Female
-              </label>
-            </div>
+           
+           
 
-            <textarea
-              name="message"
-              id=""
-              cols="10"
-              rows="7"
-              className="form-control mt-4"
-              placeholder="Type your message"
-            ></textarea>
+       
             <button type="submit" className="btn btn-success mt-4">
 
               Register {loading?<ClipLoader color="white" size={20}  className="relative top-1"/>:""}

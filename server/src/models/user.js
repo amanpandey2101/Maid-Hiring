@@ -29,6 +29,12 @@ const userSchema = new mongoose.Schema({
         unique:true,
      
     },
+    whatsapp:{
+        type:String,
+        
+  
+     
+    },
     password: { 
         type: String,
         required: true,
@@ -69,6 +75,12 @@ const userSchema = new mongoose.Schema({
     status:{
         type:String,
         default:'Pending'
+    },
+    adminDetails: {
+        name: String,
+        email: String,
+        phoneNumber: String,
+        address: String,
     },
  
     resetPasswordToken:{

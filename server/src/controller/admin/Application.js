@@ -14,14 +14,24 @@ exports.updateStatus = async (req, res) => {
     try{
        const { userId} = req.params;
        const {newStatus} = req.body;
-
-       const user = await User.findById(userId);
-       if (!user) {
+     const user = req.user;
+     console.log(user)
+       const userById = await User.findById(userId);
+       if (!userById) {
          return res.status(404).json({ message: 'User not found' });
        }
+       
 
-       user.status = newStatus;
-       await user.save();
+       userById.status = newStatus;
+       if(newStatus ==="Approved"){
+        userById.adminDetails={
+            name:req.user.firstName + ' ' + req.user.lastName,
+            email:req.user.email,
+            phoneNumber:req.user.phone,
+            address:req.user.address
+        }
+       }
+       await userById.save();
        return res.status(200).json({ message: 'Status updated successfully', user });
 
     }catch(error){

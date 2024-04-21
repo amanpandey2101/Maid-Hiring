@@ -33,7 +33,7 @@ export default function Header() {
                 <li className="nav-item">
                   <Link
                     to="/"
-                    className="nav-link text-black hover:text-white hover:bg-green-500 px-3 py-2 rounded-md text-sm font-medium  border-[1.5px] border-green-500"
+                    className="nav-link text-black hover:!text-white hover:bg-green-500 px-3 py-2 rounded-md text-sm font-medium  border-[1.5px] border-green-500 shadow-md shadow-gray-400"
                   >
                     Home
                   </Link>
@@ -41,7 +41,7 @@ export default function Header() {
                 <li className="nav-item">
                   <Link
                     to="/About"
-                    className="nav-link text-black hover:text-white hover:bg-green-500 px-3 py-2 rounded-md text-sm font-medium  border-[1.5px] border-green-500"
+                    className="nav-link text-black hover:!text-white hover:bg-green-500 px-3 py-2 rounded-md text-sm font-medium  border-[1.5px] border-green-500 shadow-md shadow-gray-400"
                   >
                     About
                   </Link>
@@ -49,7 +49,7 @@ export default function Header() {
                 <li className="nav-item">
                   <Link
                     to="/Service"
-                    className="nav-link text-black hover:text-white hover:bg-green-500 px-3 py-2 rounded-md text-sm font-medium  border-[1.5px] border-green-500"
+                    className="nav-link text-black hover:!text-white hover:bg-green-500 px-3 py-2 rounded-md text-sm font-medium  border-[1.5px] border-green-500 shadow-md shadow-gray-400"
                   >
                     Service
                   </Link>
@@ -57,7 +57,7 @@ export default function Header() {
                 <li className="nav-item">
                   <Link
                     to="/Contact"
-                    className="nav-link text-black hover:text-white hover:bg-green-500 px-3 py-2 rounded-md text-sm font-medium  border-[1.5px] border-green-500 "
+                    className="nav-link text-black hover:!text-white hover:bg-green-500  px-3 py-2 rounded-md text-sm font-medium  border-[1.5px] border-green-500 shadow-md shadow-gray-400"
                   >
                     Contact
                   </Link>
@@ -69,7 +69,7 @@ export default function Header() {
                     <li className="">
                       <Link
                         to="/login"
-                        className="nav-link text-black hover:text-yellow-800 hover:bg-green-500 px-3 py-2 rounded-md text-sm font-medium border-[1.5px] border-black"
+                        className="nav-link text-white hover:bg-green-600 bg-green-700 px-3 py-2 rounded-md text-sm font-medium shadow-md shadow-gray-400 hover:scale-[1.01]"
                       >
                         Login
                       </Link>
@@ -77,9 +77,17 @@ export default function Header() {
                     <li className="nav-item">
                       <Link
                         to="/register"
-                        className="nav-link text-black hover:text-white hover:bg-green-500 px-3 py-2 rounded-md text-sm font-medium border-[1.5px] border-black"
+                        className="nav-link text-white hover:bg-green-600 bg-green-700 px-3 py-2 rounded-md text-sm font-medium shadow-md shadow-gray-400 hover:scale-[1.01]"
                       >
-                        Register
+                        Register as Maid
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
+                        to="/client-register"
+                        className ="nav-link text-white  hover:bg-green-600 bg-green-700 px-3 py-2 rounded-md text-sm font-medium shadow-md shadow-gray-400 hover:scale-[1.01]"
+                      >
+                        Register as Client
                       </Link>
                     </li>
                   </>
@@ -87,12 +95,12 @@ export default function Header() {
                   <>
                     <Link
                       to={`${role}Dashboard/application`}
-                      className="nav-link text-white bg-violet-400  px-3 py-2 rounded-md text-sm font-medium border-[1.5px] border-violet-600 shadow-xl"
+                      className="nav-link text-white bg-violet-500  px-3 py-2 rounded-md text-sm font-medium border-[1.5px] border-violet-600  hover:bg-violet-600 hover:scale-[1.01] shadow-md shadow-gray-400"
                     >
                       Dashboard
                     </Link>
                     <Link
-                      className="nav-link text-black hover:bg-red-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium border-[1.5px] border-red-600 shadow-xl"
+                      className="nav-link text-black hover:bg-red-500 hover:!text-white px-3 py-2 rounded-md text-sm font-medium border-[1.5px] border-red-600 shadow-md shadow-gray-400"
                       onClick={handleLogOut}
                       to="/"
                     >
@@ -135,7 +143,10 @@ export default function Header() {
                     <Link to="/login" className="block py-2 px-4  no-underline  text-white  hover:bg-green-500 rounded-md hover:text-white ">Login</Link>
                   </li>
                   <li>
-                    <Link to="/register" className="block py-2 px-4 no-underline  text-white  hover:bg-green-500 rounded-md hover:text-white ">Register</Link>
+                    <Link to="/register" className="block py-2 px-4 no-underline  text-white  hover:bg-green-500 rounded-md hover:text-white ">Register as Maid</Link>
+                  </li>
+                  <li>
+                    <Link to="/client-register" className="block py-2 px-4 no-underline  text-white  hover:bg-green-500 rounded-md hover:text-white ">Register as Client</Link>
                   </li>
                 </>
               ) : (

@@ -17,6 +17,7 @@ import Status from "./UserDashboard/Application/Status";
 import AdminDashboard from "./AdminDashboard"
 import ApplicationList from "./AdminDashboard/Application/Application";
 import ScrollToTop from "./Utilities/ScrollToTop";
+import CompanySignup from "./Pages/CompanySignup";
 function App() {
   const location = useLocation();
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Service" element={<Service />} />
           <Route path="/register" element={<Hire />} />
+          <Route path="/client-register" element={<CompanySignup/>} />
           <Route path="/login" element={<Login />} />
           <Route
             path="/userDashboard"
