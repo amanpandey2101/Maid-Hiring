@@ -42,26 +42,28 @@ export default function CompanySignup() {
       </div>
       <div className="container  p-5">
         <form ref={form} onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-md-6">
+          <div className="grid md:grid-cols-2 gap-3">
+            <div>
               <input
                 type="text"
                 className="form-control"
                 placeholder="First Name"
                 name="firstName"
+                required
               />{" "}
               <br />
             </div>
-            <div className="col-md-6">
+            <div >
               <input
                 type="text"
                 className="form-control"
                 placeholder="Last Name"
                 name="lastName"
+                required
               />{" "}
               <br />
             </div>
-            <div className="col-md-6">
+            <div >
               <input
                 type="email"
                 className="form-control"
@@ -70,39 +72,42 @@ export default function CompanySignup() {
               />{" "}
               <br />
             </div>
-          </div>
-          <div className="row mt-4">
-            <div className="col-md-6">
+         
+      
+            <div>
               <input
                 type="number"
                 className="form-control"
                 placeholder="Mobile Number"
                 name="phone"
+                required
               />{" "}
               <br />
             </div>
-          <div className="row mt-4">
-            <div className="col-md-6">
+       
+            <div >
               <input
                 type="number"
                 className="form-control"
                 placeholder="Whatsapp Number"
                 name="whatsapp"
+              
               />{" "}
               <br />
             </div>
-            </div>
-            <div className="col-md-6">
+        
+            <div >
               <input
                 type="password"
                 className="form-control"
                 placeholder="Password"
                 name="password"
+                required
               />{" "}
               <br />
             </div>
            
-            <div className="col-md-6">
+            <div >
               <input
                 type="text"
                 className="form-control"
@@ -111,7 +116,7 @@ export default function CompanySignup() {
               />{" "}
               <br />
             </div>
-            <div className="col-md-6">
+            <div>
               <input
                 type="text"
                 className="form-control"
@@ -120,11 +125,12 @@ export default function CompanySignup() {
               />{" "}
               <br />
             </div>
-            <div className="col-md-4">
+            <div >
               <select
                 name="state"
                 id=""
                 class="form-select"
+                required
                
               >
                 <option value="">Select State</option>
@@ -148,7 +154,7 @@ export default function CompanySignup() {
                 <option value="Tamil Nadu">Tamil nadu</option>
               </select>{" "}
             </div>
-            <div className="col-md-2 md:mt-0 mt-4">
+            <div className=" ">
               <input
                 type="number"
                 className="form-control"
@@ -158,14 +164,14 @@ export default function CompanySignup() {
               <br />
             </div>
            
-           
+            </div>
 
        
-            <button type="submit" className="btn btn-success mt-4">
+            <button type="submit" className="btn btn-success mt-4 flex w-full justify-center">
 
               Register {loading?<ClipLoader color="white" size={20}  className="relative top-1"/>:""}
             </button>
-          </div>
+  
         </form>
       </div>
     
