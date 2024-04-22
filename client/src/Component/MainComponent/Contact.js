@@ -19,7 +19,7 @@ export default function Contact() {
         });
         e.target.reset()
         alert('Your Message has been submit Successfull ')
-        // document.write('Your Message has been successfull')
+     
     };
   
 
