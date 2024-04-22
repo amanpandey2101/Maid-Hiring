@@ -22,13 +22,13 @@ export default function Home() {
           pagination={{ clickable: true }}
         >
           <SwiperSlide>
-          <img src="./../img/1.jpg" className="d-block w-full md:h-[70vh] h-[40vh]" alt="..." />
+          <img src="./../img/1.jpg" className="d-block w-full md:h-[75vh] h-[40vh] " alt="..." />
           </SwiperSlide>
           <SwiperSlide>
-          <img src="./../img/2.jpg" className="d-block w-full md:h-[70vh] h-[40vh]" alt="..." />
+          <img src="./../img/2.jpg" className="d-block w-full md:h-[75vh] h-[40vh] " alt="..." />
           </SwiperSlide>
           <SwiperSlide>
-          <img src="./../img/3.jpeg" className="d-block w-full md:h-[70vh] h-[40vh]" alt="..." />
+          <img src="./../img/3.jpeg" className="d-block w-full md:h-[75vh] h-[40vh] " alt="..." />
           </SwiperSlide>
          
        
@@ -47,8 +47,8 @@ export default function Home() {
                 <h3 className="mt-3">Overseas Maid</h3>
                 <p>We provide Indian maids in Dubai and Singapore</p>
                 <a
-                  href="#"
-                  className="btn btn-lg btn-outline-success text-white relative top-10"
+                  href="/login"
+                  className="btn btn-lg btn-outline-success text-white relative top-10 cursor-pointer"
                 >
                   Book Now
                 </a>
@@ -64,8 +64,8 @@ export default function Home() {
                 <h3 className="mt-3">Japa Maid / Baby Massager</h3>
                 <p>Experienced Japa maids for your newborn</p>
                 <a
-                  href="#"
-                  className="btn btn-lg btn-outline-success text-white relative top-4"
+                  href="/login"
+                  className="btn btn-lg btn-outline-success text-white relative top-2.5 cursor-pointer"
                 >
                   Book Now
                 </a>
@@ -81,8 +81,8 @@ export default function Home() {
                 <h3 className="mt-3">Married Couple Work</h3>
                 <p>Experienced Married Couple for your newborn</p>
                 <a
-                  href="#"
-                  className="btn-lg btn btn-outline-success text-white relative top-10"
+                  href="/login"
+                  className="btn-lg btn btn-outline-success text-white relative md:top-10 top-4 cursor-pointer"
                 >
                   Book Now
                 </a>
@@ -170,7 +170,7 @@ export default function Home() {
               <div className="container p-5 text-center">
                 <div className="row d-flex justify-content-around text-white gap-2">
                   <div className="col-md-3  p-5  profile bg-success   ">
-                    <img src="./../img/client1.jpg" alt=""  className="h-32 w-32 rounded-full"/>
+                    <img src="./../img/client1.jpg" alt=""  className="h-32 w-32 rounded-full object-cover"/>
                     <h4 className="mt-4">Saurav Josi</h4>
                     <p>
                       e are happy with Eden Grace’s services for our new
@@ -178,7 +178,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="col-md-3 p-5  profile bg-success ">
-                    <img src="./../img/client2.jpg" alt=""  className="h-32 w-32 rounded-full"/>
+                    <img src="./../img/client2.jpg" alt=""  className="h-32 w-32 rounded-full object-cover"/>
                     <h4 className="mt-4">Rahul Kumar</h4>
                     <p>
                       e are happy with Eden Grace’s services for our new
@@ -186,7 +186,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="col-md-3   p-5  profile bg-success ">
-                    <img src="./../img/client3.jpg" alt=""  className="h-32 w-32 rounded-full" />
+                    <img src="./../img/client3.jpg" alt=""  className="h-32 w-32 rounded-full object-cover" />
                     <h4 className="mt-4">Ankita Mishra</h4>
                     <p>
                       e are happy with Eden Grace’s services for our new
