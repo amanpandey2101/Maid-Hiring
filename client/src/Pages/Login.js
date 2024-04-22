@@ -166,7 +166,7 @@ export default function Login() {
                 </div>
               </form>
               <button
-                className="flex justify-center  w-60 pt-2 pb-2  md:hover:w-64 transition-all delay-200  ease-linear hover:shadow-xl  mx-auto text-white bg-primary-600 bg-[#308e3c] hover:bg-[#2a6f33] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-md px-5  text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                className="flex justify-center  w-60 py-2  md:hover:w-64 transition-all delay-200  ease-linear hover:shadow-xl  mx-auto text-white bg-primary-600 bg-[#308e3c] hover:bg-[#2a6f33] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-md px-5  text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                 onClick={handleLogin}
               >
                 <svg
@@ -191,12 +191,16 @@ export default function Login() {
                 </svg>
                 <p>Log In</p>
               </button>
+         
+
+              <span className="relative top-3 font-semibold mr-2">New to Eco Home?</span>
               <a
-                href="/forgot-password"
+                href="/register"
                 className="relative top-3 left-1 text-emerald-700 hover:text-emerald-800 "
               >
-                Forgot Password?
+              Register Here
               </a>
+            
             </div>
           </div>
         </div>
